@@ -21,25 +21,29 @@ public class Main {
 		busCar.setSeatCount(54);
 		
 		
-		baseCar.showInfo();
+		//baseCar.showInfo();
 		
-		electricCar.showInfo();
+		//electricCar.showInfo();
 		
-		truckCar.showInfo();
+		//truckCar.showInfo();
 		
-		busCar.showInfo();
+		//busCar.showInfo();
 		
+		//int[] intarray = new int[5];
 		
-		/*
 		Car[] cars = new Car[4];
+		
+		// upcasting type conversion!
 		cars[0] = electricCar;
 		cars[1] = truckCar;
 		cars[2] = baseCar;
 		cars[3] = busCar;
 		
-		printCarInfo(cars);
+		//printCarInfo(cars);
 		
+		showCar(cars);
 		
+		/*
 		// upcasting yaptık
 		Car car3 = electricCar;
 		
@@ -62,27 +66,38 @@ public class Main {
 		*/
 	}
 	
+	public static void showCar(Car[] cars) {
+		
+		for(int i=0; i < cars.length; i++) {
+		
+			Car car = cars[i];
+			car.showInfo();
+			System.out.println("-------------");
+		}
+	}
+	
 	public static void printCarInfo(Car[] cars) {
 		
-		for(Car car : cars) {
+		for(Car otomobil : cars) {
 			
-			if(car instanceof TruckCar) {
+			if(otomobil instanceof TruckCar) {
 				
-				TruckCar truckCar = (TruckCar)car;
+				TruckCar truckCar = (TruckCar)otomobil;
+				truckCar.enableTruckItem(false);
 				System.out.println("TruckCar item found!");
 			}
-			else if(car instanceof BusCar) {
+			else if(otomobil instanceof BusCar) {
 				
-				BusCar busCar = (BusCar)car;
+				BusCar busCar = (BusCar)otomobil;
 				System.out.println("BusCar item found!");
 			}
-			else if(car instanceof ElectricCar) {
+			else if(otomobil instanceof ElectricCar) {
 				
-				ElectricCar electricCar = (ElectricCar)car;
+				ElectricCar electricCar = (ElectricCar)otomobil;
 				System.out.println("ElectricCar item found!");
 			}
 			
-			car.showInfo();
+			otomobil.showInfo();
 			System.out.println("-------------");
 		}
 		

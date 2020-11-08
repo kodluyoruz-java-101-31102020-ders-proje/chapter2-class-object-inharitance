@@ -65,8 +65,4 @@ public class ElectricCar extends Car
 		System.out.println("Charge time: " + this.chargeTime);
 	}
 	
-	
-	
-	
-	
 }

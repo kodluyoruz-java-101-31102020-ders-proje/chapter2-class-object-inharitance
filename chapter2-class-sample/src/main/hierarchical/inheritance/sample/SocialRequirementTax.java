@@ -2,14 +2,14 @@ package main.hierarchical.inheritance.sample;
 
 public class SocialRequirementTax extends Tax{
 	
-	public SocialRequirementTax(double value) {
+	public SocialRequirementTax(double value, double ratio) {
 		
-		super(value);
+		super(value, ratio);
 	}
 	
 	@Override
 	public double calculate() {
 		
-		return 10;
+		return (super.value * super.ratio) + 10;
 	}
 }

@@ -8,7 +8,7 @@ public class TaxCalculator {
 		
 		for(Tax tax : taxes) {
 			
-			totalValue += tax.calculate();
+			totalValue = totalValue + tax.calculate();
 		}
 		
 		return totalValue;

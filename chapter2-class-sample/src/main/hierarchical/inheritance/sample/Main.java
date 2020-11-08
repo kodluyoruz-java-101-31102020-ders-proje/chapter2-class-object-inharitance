@@ -12,9 +12,9 @@ public class Main {
 		double invoiceValue = scanner.nextDouble();
 		
 		Tax[] taxes = new Tax[3];
-		taxes[0] = new KDVTax(invoiceValue);
-		taxes[1] = new OTVTax(invoiceValue);
-		taxes[2] = new SocialRequirementTax(invoiceValue);
+		taxes[0] = new KDVTax(invoiceValue, 0.20);
+		taxes[1] = new OTVTax(invoiceValue, 0.40);
+		taxes[2] = new SocialRequirementTax(invoiceValue, 0.15);
 		
 		double totalTaxValue = TaxCalculator.totalTaxValue(taxes);
 		System.out.println("Total Tax Value:" + totalTaxValue);
